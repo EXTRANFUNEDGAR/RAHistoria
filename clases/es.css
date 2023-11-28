@@ -1,0 +1,44 @@
+
+
+
+#derecha{
+    margin-left: 85%;
+}
+
+#izquierda{
+    margin-left: 10px;
+}
+
+#centro{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#grid2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    
+}
+#grid3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    
+}
+
+#btnindex{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#up{
+    margin-top: 10px;
+    margin-right: 100%;
+}
+#btncerrar{
+    margin-top: 10px;
+    margin-right: 10%;
+}
