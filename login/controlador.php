@@ -7,7 +7,7 @@ if (!empty($_POST["btningresar"])) {
         $contraseña=$_POST["password"];
         $sql=$conexion->query("select * from usuarios where usuario='$usuario' and contraseña='$contraseña'");
         if ($datos=$sql->fetch_object()){
-            header("location:index.php");
+            header("location: clases/clases.html");
         } else {
             echo '<div class="alert alert-danger">Acceso denegado</div>';
         }

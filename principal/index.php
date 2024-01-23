@@ -101,10 +101,10 @@
       <div id="fondo_reg"></div>
       <div id="fondo_login"></div>
       <div id="btnacceder">
-        <button class="acceder" > Acceder </button>
+        <button class="acceder" type="button" onclick="login/login.php" > Acceder </button>
       </div>
           <div id="btnregistrar">
-           <button class="registrar" > Registrar </button>
+          <button class="registrar" type="button" onclick="login/login.php" > Registrar </button>
           </div>
           
           <div class="fondo"></div>
