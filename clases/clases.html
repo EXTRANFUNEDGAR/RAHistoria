@@ -12,75 +12,63 @@
     <a href="index.html" type="button" class="btn btn-success" id="btncerrar">Cerrar Sesion</a>
     <div class="card-group" id="izquierda">
         <div class="card">
-          <div class="p-3 mb-2 bg-dark text-white">
-            <img src="img/IMG_20230806_152759.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Grupo A</h5>
-              <form onsubmit="enviarDatoSeleccionado(); return false;">
-                <a href="marcadores.html" class="btn btn-primary">Marcadores</a>    
-                <div class="container mt-4">
-                  <div class="form-group">
-                    <label for="seleccionB">Selecciona la clase:</label>
-                    <select class="form-control" id="seleccionB">
-                      <option value="elemento1">Los primeros Humanos</option>
-                      <option value="elemento2">Mexico antiguo</option>
-                      <option value="elemento3">La independencia Mexicana</option>
-                    </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Abrir</button>
+            <div class="p-3 mb-2 bg-dark text-white">
+                <img src="img/IMG_20230806_152759.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Grupo A</h5>
+                    
+                    <a href="marcadores.html" class="btn btn-primary">Marcadores</a>
+                    <div class="container mt-4">
+                        <div class="form-group">
+                            <label for="seleccionA">Selecciona la clase:</label>
+                            <select class="form-control" id="seleccionA">
+                                <option value="elemento1">Los primeros Humanos</option>
+                                <option value="elemento2">Mexico antiguo</option>
+                                <option value="elemento3">La independencia Mexicana</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="enviarDatoSeleccionado('seleccionA')">Abrir</button>
+                    </div>
                 </div>
-              </form>
-
             </div>
-          </div>
         </div>
         <div class="card">
-          <div class="p-3 mb-2 bg-dark text-white">
-            <img src="img/IMG_20230806_152759.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Grupo B</h5>
-              <form onsubmit="enviarDatoSeleccionado(); return false;">
-                <a href="marcadores.html" class="btn btn-primary">Marcadores</a>    
-                <div class="container mt-4">
-                  <div class="form-group">
-                    <label for="seleccionB">Selecciona la clase:</label>
-                    <select class="form-control" id="seleccionB">
-                      <option value="elemento1">Los primeros Humanos</option>
-                      <option value="elemento2">Mexico antiguo</option>
-                      <option value="elemento3">La independencia Mexicana</option>
-                    </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Abrir</button>
+            <div class="p-3 mb-2 bg-dark text-white">
+                <img src="img/IMG_20230806_152759.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Grupo B</h5>
+                    <a href="marcadores.html" class="btn btn-primary">Marcadores</a>
+                    <div class="container mt-4">
+                        <form onsubmit="enviarDatoSeleccionado('seleccionB'); return false;">
+                            <div class="form-group">
+                                <label for="seleccionB">Selecciona la clase:</label>
+                                <select class="form-control" id="seleccionB">
+                                  <option value="elemento1">Los primeros Humanos</option>
+                                  <option value="elemento2">Mexico antiguo</option>
+                                  <option value="elemento3">La independencia Mexicana</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Abrir</button>
+                        </form>
+                    </div>
                 </div>
-              </form>
             </div>
-          </div>
         </div>
+    </div>
 
-      </div>
+    <script>
+        function enviarDatoSeleccionado(idSelect) {
+            // Obtener el elemento select
+            var dropdown = document.getElementById(idSelect);
+        
+            // Obtener el valor seleccionado
+            var datoSeleccionado = dropdown.options[dropdown.selectedIndex].value;
+        
+            // Redireccionar o realizar otra acción con el valor seleccionado
+            window.location.href = "clase.html?dato=" + encodeURIComponent(datoSeleccionado);
+        }
+    </script>
 
-
-      <script>
-        function enviarDatoSeleccionado() {
-          // Obtener el elemento select
-          var dropdown = document.getElementById('seleccion');
-      
-          // Obtener el valor seleccionado
-          var datoSeleccionado = dropdown.options[dropdown.selectedIndex].value;
-      
-          // Redireccionar o realizar otra acción con el valor seleccionado
-          window.location.href = "pd.html?dato=" + encodeURIComponent(datoSeleccionado);
-
-          
-
-      </script>
-
-
-
-
-
-
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
