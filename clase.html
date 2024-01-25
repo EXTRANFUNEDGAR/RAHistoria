@@ -12,32 +12,12 @@
     <a-scene arjs>
         <a-marker preset="hiro">
             <a-entity position="0 0 0" scale="0.1 0.1 0.1">
-                <a-entity position="0 0 0" scale="1" gltf-model=""></a-entity>
+                <a-entity position="0 0 0" scale="1" gltf-model="modelos/piramide.glb"></a-entity>
             </a-entity>
         </a-marker>
         <a-entity camera look-controls position="0 0 0"></a-entity>
     </a-scene>
 
-    <script>
-        // Obtener el parámetro 'elemento' de la URL
-        var urlParams = new URLSearchParams(window.location.search);
-        var elementoSeleccionado = urlParams.get('elemento');
-
-        // Establecer el modelo en función del parámetro recibido
-        if (elementoSeleccionado === 'elemento1') {
-            // Ruta al modelo correspondiente a 'elemento1'
-            document.querySelector('a-entity[gltf-model]').setAttribute('gltf-model', 'modelos/canon1.glb');
-        } else if (elementoSeleccionado === 'elemento2') {
-            // Ruta al modelo correspondiente a 'elemento2'
-            document.querySelector('a-entity[gltf-model]').setAttribute('gltf-model', 'modelos/elemento2.gbl');
-        } else if (elementoSeleccionado === 'elemento3') {
-            // Ruta al modelo correspondiente a 'elemento3'
-            document.querySelector('a-entity[gltf-model]').setAttribute('gltf-model', 'modelos/elemento3.gbl');
-        }
-        // Puedes agregar más casos según sea necesario para otros elementos.
-
-        // Puedes extender esto según sea necesario para manejar diferentes modelos.
-    </script>
 </body>
 </html>
 

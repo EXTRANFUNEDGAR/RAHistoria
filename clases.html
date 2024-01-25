@@ -57,17 +57,26 @@
     </div>
 
     <script>
-        function enviarDatoSeleccionado(idSelect) {
-            // Obtener el elemento select
-            var dropdown = document.getElementById(idSelect);
-        
-            // Obtener el valor seleccionado
-            var datoSeleccionado = dropdown.options[dropdown.selectedIndex].value;
-        
-            // Redireccionar o realizar otra acción con el valor seleccionado
-            window.location.href = "clase.html?dato=" + encodeURIComponent(datoSeleccionado);
+        function enviarDatoSeleccionado(selectId) {
+            var selectedValue = document.getElementById(selectId).value;
+            
+            var pageUrls = {
+                'elemento1': 'clase1.html',
+                'elemento2': 'clase2.html',
+                'elemento3': 'clase3.html'
+                
+            };
+    
+            var selectedPageUrl = pageUrls[selectedValue];
+    
+            
+            window.location.href = selectedPageUrl;
+            
+           
+            return false;
         }
     </script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
