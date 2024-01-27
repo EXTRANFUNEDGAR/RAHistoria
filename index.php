@@ -38,7 +38,7 @@
       </div>
       
       <div class="btnr" id="btnregistrar">
-        <button class="registrar" type="button" href="login.php" > Registrar </button>
+        <button class="registrar" type="button" onclick="window.location.href='login.php'" > Registrar </button>
       </div>
     </div>
           
