@@ -33,7 +33,8 @@
     
     <div class="Login">
       <div id="btnacceder">
-        <button class="acceder" type="button" href="login.php" > Acceder </button>
+      <button class="acceder" type="button" onclick="window.location.href='login.php'">Acceder</button>
+
       </div>
       
       <div class="btnr" id="btnregistrar">
@@ -53,6 +54,12 @@
             </div>
 
     </div>
+
+  <script>
+    function pag{
+     location.href ='https://pablomonteserin.com';
+  
+  </script>
 
 
 
