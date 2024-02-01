@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="Recursos/styles.css">
 
   <link rel="stylesheet" href="Recursos/w3.css">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body class ="back">
 
@@ -30,6 +31,7 @@
         </nav>
 
     </header>
+    
     
     <div class="Login">
       <div id="btnacceder">
