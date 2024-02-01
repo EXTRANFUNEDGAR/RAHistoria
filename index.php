@@ -49,7 +49,7 @@
             <div class="content">
               <p class="heading">Realidad Aumentada</p>
             <p class="texto">
-              El uso de las tecnologías está en su auge, y la realidad aumentada en el ámbito educativo cada vez es más frecuente. Por lo que “[NOMBRE DEL PROYECTO]” genera una relación alumno-docente donde la enseñanza es más divertida y entretenida.  
+              El uso de las tecnologías está en su auge, y la realidad aumentada en el ámbito educativo cada vez es más frecuente. Por lo que “RA en el aprendizaje de historia” genera una relación alumno-docente donde la enseñanza es más divertida y entretenida.  
             </p>
                 <button class="btn">INFO</button>
 
@@ -60,7 +60,7 @@
   <script>
     function pag{
      location.href ='https://pablomonteserin.com';
-  
+    }
   </script>
 
 
