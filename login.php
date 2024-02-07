@@ -13,7 +13,7 @@
 </head>
 
 <body>
-   <img class="wave" src="img/wave.png">
+   <img class="wave" src="img/wave1.png">
    <div class="container">
       <div class="img">
       </div>
