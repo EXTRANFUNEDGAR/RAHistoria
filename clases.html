@@ -6,14 +6,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="es.css">
+    <link rel="stylesheet" href="Recursos/styles.css">
+
+    <link rel="stylesheet" href="Recursos/w3.css">
 </head>
 <body>
-    <a href="index.php" type="button" class="btn btn-success" id="btnindex">Inicio</a>
-    <a href="login.php" type="button" class="btn btn-success" id="btncerrar">Cerrar Sesion</a>
+    <header class="header">
+        <a href="index.php" type="button" class="btn btn-secondary" id="btnindex">Inicio</a>
+        <a href="index.php" type="button" class="btn btn-secondary" id="btncerrar">Cerrar Sesion</a>
+        <div class="logo">
+
+            <img src="Recursos/juarez.png" alt="Primaria Benito Juarez">
+        </div>
+        <nav class="menu">
+           <ul class="nav-links">
+            <label id="titulo">Escuela Benito Juárez</label>
+            <li><a href="#"> Ayuda </a>
+            	<ul id="submenu">
+            		<li><a href="#">Contacto </a></li>
+            		<li><a href="#">Soporte </a></li>
+            	</ul>
+            </li>
+           </ul> 
+        </nav>
+
+    </header>
+
+
+
     <div class="card-group" id="izquierda">
         <div class="card">
             <div class="p-3 mb-2 bg-dark text-white">
-                <img src="img/IMG_20230806_152759.jpg" class="card-img-top" alt="..." />
+                <img src="img/a2.jpg" class="card-img-top" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title">Grupo A</h5>
                     
@@ -32,9 +56,9 @@
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="p-3 mb-2 bg-dark text-white">
-                <img src="img/IMG_20230806_152759.jpg" class="card-img-top" alt="..." />
+        <div class="card" id="color">
+            <div  class="p-3 mb-2 bg-dark text-white">
+                <img src="img/b2.jpg" class="card-img-top" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title">Grupo B</h5>
                     <a href="marcadores.html" class="btn btn-primary">Marcadores</a>
@@ -43,9 +67,9 @@
                             <div class="form-group">
                                 <label for="seleccionB">Selecciona la clase:</label>
                                 <select class="form-control" id="seleccionB">
-                                  <option value="elemento1">Los primeros Humanos</option>
-                                  <option value="elemento2">Mexico antiguo</option>
-                                  <option value="elemento3">La independencia Mexicana</option>
+                                    <option value="elemento1">Los primeros Humanos</option>
+                                    <option value="elemento2">Mexico antiguo</option>
+                                    <option value="elemento3">La independencia Mexicana</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Abrir</button>
@@ -54,6 +78,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 
     <script>
@@ -75,6 +100,8 @@
            
             return false;
         }
+
+
     </script>
     
 

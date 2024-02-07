@@ -10,6 +10,13 @@
 
   <link rel="stylesheet" href="Recursos/w3.css">
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <style>
+    body {
+      background-image: url('img/i.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+    }
+  </style>
 </head>
 <body class ="back">
 
@@ -31,6 +38,8 @@
         </nav>
 
     </header>
+
+    
     
     
     <div class="Login">

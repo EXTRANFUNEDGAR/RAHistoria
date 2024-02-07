@@ -1,4 +1,10 @@
 
+/* es.css */
+
+#color .card-body {
+    background-color: #ff0000; /* Fondo rojo para la tarjeta Grupo B */
+    color: #00ffff; /* Texto blanco para la tarjeta Grupo B */
+}
 
 
 #derecha{
@@ -42,3 +48,25 @@
     margin-top: 10px;
     margin-right: 10%;
 }
+
+.color {
+    color: rgb(255, 0, 0); /* Rojo */
+    background-color: rgb(0, 0, 255); /* Azul */
+}
+
+#bg-color {
+    background-color: #ff0000; /* Color de fondo personalizado (rojo) */
+}
+
+.custom-text-color {
+    color: #00ffff; /* Color del texto personalizado (blanco) */
+}
+
+.card #color.custom-bg-color {
+    background-color: #0099ff !important;
+}
+
+.card #color.custom-text-color {
+    color: #0099ff !important;
+}
+
