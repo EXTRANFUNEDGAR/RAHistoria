@@ -42,6 +42,8 @@
       <div class="btnr" id="btnregistrar">
         <button class="registrar" type="button" onclick="window.location.href='registro.html'" > Registrar </button>
       </div>
+      
+      
     </div>
           
 
