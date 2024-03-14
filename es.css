@@ -70,3 +70,33 @@
     color: #0099ff !important;
 }
 
+/* Estilos para la clase card-group */
+.card-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+    width: calc(33.333% - 30px); /* Ajusta el ancho según sea necesario */
+    max-width: calc(33.333% - 30px); /* Ajusta el ancho máximo según sea necesario */
+}
