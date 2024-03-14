@@ -15,7 +15,7 @@ body {
 
 
 .header{
-    background-color: #74DF00;
+    background-color: #0099ff;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -77,7 +77,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #74DF00;
+    background-color: #0099ff;
     display: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -182,18 +182,18 @@ body {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  background: #74DF00;
+  background: #0099ff;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .outer:hover {
   box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
-  border-color: #74DF00;
+  border-color: #0099ff;
 }
 
 .content .btn:hover {
-  outline: 2px solid #74DF00;
+  outline: 2px solid #0099ff;
   background: transparent;
   color: #000000;
 }
@@ -242,7 +242,7 @@ body {
 
 .Login:hover {
   box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
-  border-color: #74DF00;
+  border-color: #0099ff;
 }
 
 .registrar{
