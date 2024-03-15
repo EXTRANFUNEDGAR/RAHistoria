@@ -10,8 +10,13 @@
 <body>
     <a-scene arjs>
         <a-marker preset="hiro">
-            <a-entity position="0 0 0" scale="0.5 0.5 0.5" rotation="0 90 270">
+            <a-entity position="0 0 0" scale="0.2 0.2 0.2" rotation="0 90 270">
                 <a-entity position="0 0 0" scale="1" gltf-model="../modelos/canon1.glb"></a-entity>
+            </a-entity>
+        </a-marker>
+        <a-marker type='pattern' url='../marcadores/pattern169.patt'>
+            <a-entity position="0 0 0" scale="2 2 2" rotation="270 0 0">
+                <a-entity position="0 0 0" scale="1" gltf-model="../modelos/winchester_1873.glb"></a-entity>
             </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
