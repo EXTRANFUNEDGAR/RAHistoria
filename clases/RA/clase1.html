@@ -8,33 +8,28 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <link rel="stylesheet" href="preguntas.css">
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var radios = document.querySelectorAll('input[type="radio"]');
-            radios.forEach(function(radio) {
-                radio.style.position = 'absolute';
-                radio.style.left = '-9999px';
-            });
-        });
-    </script>
+
 </head>
 <body>
-    <div id="pregunta">
-        <h2>¿Cuál es tu color favorito?</h2>
-    </div>
-    <div id="respuesta">
-        <form id="form" method="post" action="procesar_respuesta.php">
-            <input type="radio" id="rojo" name="color" value="rojo">
-            <label for="rojo">Rojo</label>
-            <input type="radio" id="azul" name="color" value="azul">
-            <label for="azul">Azul</label>
-            <input type="radio" id="verde" name="color" value="verde">
-            <label for="verde">Verde</label>
-            <br>
-            <input type="submit" value="Enviar">
-        </form>
-    </div>
-
+    <font face="Century Gothic">
+        
+    
+        <div id="pregunta">
+            <h2>?De que continente llegaron los primero humanos a America?</h2>
+        </div>
+        <div id="respuesta">
+            <form id="form" method="get" action="procesar_respuesta.php">
+                <input type="radio" id="Africa" name="res" value="Africa">
+                <label for="Africa">Africa</label>
+                <input type="radio" id="Asia" name="res" value="Asia">
+                <label for="Asia">Asia</label>
+                <input type="radio" id="Europa" name="res" value="Europa">
+                <label for="Europa">Europa</label>
+                <br>
+                <input class="button-55" role="button" id="enviar" type="submit" value="Enviar">
+            </form>
+        </div>
+    </font>
     <a-scene arjs>
         <a-marker preset="hiro">
             <a-entity position="0 0 0" scale="1 1 1" rotation="270 90 270">

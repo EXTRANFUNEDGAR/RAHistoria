@@ -9,6 +9,25 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
+    <font face="Century Gothic">
+        
+    
+        <div id="pregunta">
+            <h2>¿Cuál es tu color favorito?</h2>
+        </div>
+        <div id="respuesta">
+            <form id="form" method="get" action="procesar_respuesta.php">
+                <input type="radio" id="rojo" name="color" value="rojo">
+                <label for="rojo">Rojo</label>
+                <input type="radio" id="azul" name="color" value="azul">
+                <label for="azul">Azul</label>
+                <input type="radio" id="verde" name="color" value="verde">
+                <label for="verde">Verde</label>
+                <br>
+                <input class="button-55" role="button" id="enviar" type="submit" value="Enviar">
+            </form>
+        </div>
+    </font>
     <a-scene arjs>
         <a-marker preset="hiro">
             <a-entity position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0">

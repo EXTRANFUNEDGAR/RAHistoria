@@ -30,7 +30,21 @@
         </nav>
 
     </header>
+<!--
+    <aside class="aside-left">
+        <div>
+            <form id="form" method="get" action="procesar_respuesta.php">
+                <label for="res">Codigo de clase</label>
+                <br>
+                <input type="text" id="res" name="res">
+                <br>
+                <br>
+                <input class="button-55" role="button" id="enviar" type="submit" value="Entrar">
+            </form>
 
+        </div>
+    </aside>
+-->
 
 
     <div class="card-group" id="izquierda">
@@ -49,6 +63,7 @@
                                 <option value="elemento2">Mexico antiguo</option>
                                 <option value="elemento3">La independencia Mexicana</option>
                                 <option value="elemento4">Memoria</option>
+                                <option value="elemento5">Ahorcado</option>
                             </select>
                         </div>
                         <button type="button" class="btn btn-primary" onclick="enviarDatoSeleccionado('seleccionA')">Abrir</button>
@@ -71,6 +86,7 @@
                                     <option value="elemento2">Mexico antiguo</option>
                                     <option value="elemento3">La independencia Mexicana</option>
                                     <option value="elemento4">Memoria</option>
+                                    <option value="elemento5">Ahorcado</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Abrir</button>
@@ -87,10 +103,11 @@
             var selectedValue = document.getElementById(selectId).value;
             
             var pageUrls = {
-                'elemento1': 'clases/clase1.html',
-                'elemento2': 'clases/clase2.html',
-                'elemento3': 'clases/clase3.html',
-                'elemento4': 'games/mem/memoria.html'
+                'elemento1': 'clases/RA/clase1.html',
+                'elemento2': 'clases/RA/clase2.html',
+                'elemento3': 'clases/RA/clase3.html',
+                'elemento4': 'games/mem/memoria.html',
+                'elemento5': 'games/ahorcado/a.html'
                 
                 
             };

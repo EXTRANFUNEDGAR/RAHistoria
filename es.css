@@ -101,3 +101,10 @@
     width: calc(23.333% - 30px); /* Ajusta el ancho según sea necesario */
     max-width: calc(33.333% - 30px); /* Ajusta el ancho máximo según sea necesario */
 }
+.aside-left {
+    float: left; 
+    width: 100px; 
+     
+}
+
+
