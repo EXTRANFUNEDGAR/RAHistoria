@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../custom.css" />
+    <link rel="stylesheet" href="../es.css">
+    <link rel="stylesheet" href="../Recursos/styles.css">
+    <link rel="stylesheet" href="../Recursos/w3.css">
+</head>
+<body>
+    <font face="Century Gothic">
+    <header class="header">
+        <a href="../index.php" type="button" class="btn btn-secondary" id="btnindex">Inicio</a>
+        <a href="../index.php" type="button" class="btn btn-secondary" id="btncerrar">Cerrar Sesion</a>
+        <div class="logo">
+
+            <img src="../Recursos/juarez.png" alt="Primaria Benito Juarez">
+        </div>
+        <nav class="menu">
+           <ul class="nav-links">
+            <label id="titulo">Escuela Benito Juárez</label>
+            <li><a href="#"> Ayuda </a>
+            	<ul id="submenu">
+            		<li><a href="#">Contacto </a></li>
+            		<li><a href="#">Soporte </a></li>
+            	</ul>
+            </li>
+           </ul> 
+        </nav>
+
+    </header>
+
+
+    <br>
+    <div class="card-group" id="izquierda" align='center'>
+        <div class="card">
+            <div class="p-3 mb-2 bg-dark text-white">
+                <img src="img/act.png" class="card-img-top" alt="No deberias de estar viendo esto" />
+                <div class="card-body">
+                    
+                    
+                    
+                    <div class="container mt-4">
+                        <form onsubmit="enviarDatoSeleccionado('seleccionB'); return false;">
+                            <div class="form-group">
+                                <label for="seleccionB">Selecciona la Actividad:</label>
+                                <select class="form-control" id="seleccionA">
+                                    <option value="elemento1">Actividad 1 </option>
+                                    <option value="elemento2">Actividad 2 </option>
+                                    <option value="elemento3">Actividad 3 </option>
+                                    <option value="elemento4">Actividad 4 </option>
+                                    <option value="elemento5">Actividad 5 </option>
+                                    <option value="elemento1">Actividad 6 </option>
+                                    <option value="elemento2">Actividad 7 </option>
+                                    <option value="elemento3">Actividad 8 </option>
+                                    <option value="elemento4">Actividad 9 </option>
+                                    <option value="elemento5">Actividad 10 </option>
+                                </select>
+                            </div>
+                            <br>
+                            <button type="submit" class="button-55">Abrir</button>
+                        </form>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="card" >
+            <div  class="p-3 mb-2 bg-dark text-white">
+                <br>
+                <br>
+                <img src="img/you.jpg" class="card-img-top" alt="No deberias de estar viendo esto" />
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=LwYpTWQauXw" class="button-55">Video</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card" >
+            <div  class="p-3 mb-2 bg-dark text-white">
+                <img src="img/games.png" class="card-img-top" alt="No deberias de estar viendo esto" />
+                <div class="card-body">
+                    <div class="container mt-4">
+                        <form onsubmit="enviarDatoSeleccionado('seleccionB'); return false;">
+                            <div class="form-group">
+                                <label for="seleccionB">Selecciona la Actividad:</label>
+                                <select class="form-control" id="seleccionB">
+                                    <option value="elemento2">Memorama </option>
+                                    <option value="elemento4">Ahorcado </option>
+                                    <option value="elemento3">juego 3 </option>
+                                    <option value="elemento4">juego 4 </option>
+                                    <option value="elemento5">juego 5 </option>
+                                </select>
+                            </div>
+                            <br>
+                            <button type="submit" class="button-55">Abrir</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="card-group" id="izquierda">
+
+    </div>
+</font>
+
+    <script>
+        function enviarDatoSeleccionado(selectId) {
+            var selectedValue = document.getElementById(selectId).value;
+            
+            var pageUrls = {
+                'elemento1': 'RA/losPrimerosHumanos/Actividad1.html',
+                'elemento2': 'RA/losPrimerosHumanos/mem/memoria.html',
+                'elemento3': 'RA/losPrimerosHumanos/Actividad1.html',
+                'elemento4': 'RA/losPrimerosHumanos/ahorcado/a.html',
+                'elemento5': 'RA/losPrimerosHumanos/Actividad1.html',
+                'elemento6': 'RA/losPrimerosHumanos/Actividad1.html',
+                'elemento7': 'RA/losPrimerosHumanos/Actividad1.html',
+                'elemento8': 'RA/losPrimerosHumanos/Actividad1.html',
+                'elemento9': 'RA/losPrimerosHumanos/Actividad1.html',
+                'elemento10': 'RA/losPrimerosHumanos/Actividad1.html'
+                
+                
+            };
+    
+            var selectedPageUrl = pageUrls[selectedValue];
+    
+            
+            window.location.href = selectedPageUrl;
+            
+           
+            return false;
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
