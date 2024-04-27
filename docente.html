@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet" href="es.css">
+    <link rel="stylesheet" href="Recursos/styles.css">
+    <link rel="stylesheet" href="Recursos/w3.css">
     <link rel="stylesheet" href="es.css">
 </head>
 <body>
-    <a href="index.php" type="button" class="btn btn-success" id="btnindex">Inicio</a>
-    <a href="login.php" type="button" class="btn btn-success" id="btncerrar">Cerrar Sesion</a>
+  <header class="header">
+    <a href="index.php" type="button" class="btn btn-secondary" id="btnindex">Inicio</a>
+    <a href="index.php" type="button" class="btn btn-secondary" id="btncerrar">Cerrar Sesion</a>
+    <div class="logo">
+
+        <img src="Recursos/juarez.png" alt="Primaria Benito Juarez">
+    </div>
+    <nav class="menu">
+       <ul class="nav-links">
+        <label id="titulo">Escuela Benito Juárez</label>
+        <li><a href="#"> Ayuda </a>
+          <ul id="submenu">
+            <li><a href="#">Contacto </a></li>
+            <li><a href="#">Soporte </a></li>
+          </ul>
+        </li>
+       </ul> 
+    </nav>
+
+</header>
+<br>
     <div class="card-group" id="izquierda">
         <div class="card">
           <div class="p-3 mb-2 bg-dark text-white">
