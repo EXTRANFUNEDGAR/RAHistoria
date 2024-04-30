@@ -1,5 +1,24 @@
 
 /* es.css */
+.izqa { 
+    float: left;
+    background-repeat:repeat-y;
+    width:2in; 
+    height:6in;
+    } 
+    .dera { 
+        float: right;
+        background-repeat:repeat-y;
+        width:2in; 
+        height:6in;
+        }     
+
+.izq{
+    margin-left: 10%;
+}
+.der{
+    margin-right: 0%;
+}
 
 #color .card-body {
     background-color: #ff0000; /* Fondo rojo para la tarjeta Grupo B */
@@ -99,13 +118,9 @@
     margin-bottom: 0;
     margin-left: 15px;
     width: calc(23.333% - 30px); /* Ajusta el ancho según sea necesario */
-    max-width: calc(33.333% - 30px); /* Ajusta el ancho máximo según sea necesario */
+    max-width: calc(23.333% - 30px); /* Ajusta el ancho máximo según sea necesario */
 }
-.aside-left {
-    float: left; 
-    width: 100px; 
-     
-}
+
 
 
 /*boton*/

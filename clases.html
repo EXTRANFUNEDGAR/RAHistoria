@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Recursos/w3.css">
 </head>
 <body>
+    <font face="Century Gothic">
     <header class="header">
         <a href="index.php" type="button" class="btn btn-secondary" id="btnindex">Inicio</a>
         <a href="index.php" type="button" class="btn btn-secondary" id="btncerrar">Cerrar Sesion</a>
@@ -30,9 +31,18 @@
         </nav>
 
     </header>
-<!--
-    <aside class="aside-left">
-        <div>
+
+    <aside class="izqa">
+        <br>
+        <div class="izq">
+            <a class="button-55" href="javascript: history.go(-1)">Volver atrás</a>
+
+        </div>
+    </aside>
+
+    <aside class="dera">
+        <br>
+        <div class="der">
             <form id="form" method="get" action="procesar_respuesta.php">
                 <label for="res">Codigo de clase</label>
                 <br>
@@ -44,7 +54,7 @@
 
         </div>
     </aside>
--->
+
 <br>
 
 
@@ -73,33 +83,9 @@
                 </div>
             </div>
         </div>
-        <div class="card" >
-            <div  class="p-3 mb-2 bg-dark text-white">
-                <img src="img/b2.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Grupo B</h5>
-                    <a href="marcadores.html" class="btn btn-primary">Marcadores</a>
-                    <div class="container mt-4">
-                        <form onsubmit="enviarDatoSeleccionado('seleccionB'); return false;">
-                            <div class="form-group">
-                                <label for="seleccionB">Selecciona la clase:</label>
-                                <select class="form-control" id="seleccionB">
-                                    <option value="elemento1">Los primeros Humanos</option>
-                                    <option value="elemento2">Mexico antiguo</option>
-                                    <option value="elemento3">La independencia Mexicana</option>
-                                    <option value="elemento4">Memoria</option>
-                                    <option value="elemento5">Ahorcado</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Abrir</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         
     </div>
-
+</font>
     <script>
         function enviarDatoSeleccionado(selectId) {
             var selectedValue = document.getElementById(selectId).value;
