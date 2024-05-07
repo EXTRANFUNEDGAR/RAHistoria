@@ -117,7 +117,7 @@
                </div>
                <div class="div">
                   <h5 id="usuarioLabel" class="placeholder">Usuario</h5>
-                  <input id="usuario" type="text" class="input" name="usuario" oninput="mostrarPlaceholder('usuarioLabel', this.value)">
+                  <input id="usuario" type="text" class="input" name="curp" oninput="mostrarPlaceholder('usuarioLabel', this.value)">
                </div>
             </div>
             <div class="input-div pass">
@@ -126,7 +126,7 @@
                </div>
                <div class="div">
                   <h5 id="passwordLabel" class="placeholder">Contraseña</h5>
-                  <input type="password" id="inputPassword" class="input" name="password" oninput="mostrarPlaceholder('passwordLabel', this.value)">
+                  <input type="password" id="inputPassword" class="input" name="contrasena" oninput="mostrarPlaceholder('passwordLabel', this.value)">
                   <div class="view" onclick="mostrarContrasena()">
                      <i class="fas fa-eye"></i>
                   </div>
@@ -135,7 +135,7 @@
 
             <div class="text-center">
                <a class="font-italic isai5" href="#">Olvidé mi contraseña</a>
-               <a class="font-italic isai5" href="#">Registrarse</a>
+               <a class="font-italic isai5" href="registro.html">Registrarse</a>
             </div>
             <input name="btningresar" class="btn" type="submit" value="INICIAR SESION">
          </form>

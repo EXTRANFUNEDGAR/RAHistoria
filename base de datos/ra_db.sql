@@ -76,7 +76,7 @@ CREATE TABLE `temas` (
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `curp` varchar(18) DEFAULT NULL,
-  `contrasena` varchar(20) DEFAULT NULL,
+  `contrasena` varchar(255) DEFAULT NULL,
   `tipo` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
