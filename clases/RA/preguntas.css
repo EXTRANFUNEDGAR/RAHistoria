@@ -91,3 +91,18 @@ input[type="radio"] {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 /*boton*/
+
+    #mensaje {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        display: none;
+    }
+
