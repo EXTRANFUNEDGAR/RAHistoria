@@ -27,11 +27,31 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `usuarios` (
-  `usuario` varchar(100) NOT NULL,
-  `contraseña` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+create database ra_db;
 
+create table usuarios 
+	(id_usuario int AUTO_INCREMENT primary key, 
+  curp varchar(18), 
+  contrasena varchar(20),
+  tipo int(2))
+
+create table clases
+	(id_clase int AUTO_INCREMENT primary key,
+  id_usuario int)        
+    
+create table temas
+	(id_tema int AUTO_INCREMENT primary key,
+  id_clase int,
+  tema varchar(100))        
+
+create table avance
+	(id_usuario int,
+  id_tema int,
+  avance int)
+
+create table clase_usuario
+  (id_clase int, 
+  id_usuario int)
 --
 -- Volcado de datos para la tabla `usuarios`
 --
@@ -39,6 +59,8 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`usuario`, `contraseña`) VALUES
 ('Emmanuel', '1234'),
 ('Emmanuel', '1234');
+
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

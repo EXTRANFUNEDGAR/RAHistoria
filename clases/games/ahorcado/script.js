@@ -98,8 +98,8 @@ const selectRandomWord = () => {
 };
 
 const drawHangMan = () => {
-    ctx.canvas.width  = 120;
-    ctx.canvas.height = 160;
+    ctx.canvas.width  = 220;
+    ctx.canvas.height = 260;
     ctx.scale(20, 20);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#d95d39';
