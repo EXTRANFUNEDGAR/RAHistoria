@@ -1,28 +1,63 @@
 <?php
-if (!empty($_POST["btningresar"])) {
-    if (empty($_POST["usuario"]) and empty($_POST["password"])){
-        echo '<div class="alert alert-danger">Estan vacios los campos</div>';
+$conexion = new mysqli("localhost", "root", "", "ra_db");
+
+if ($conexion->connect_error) {
+    die("Error de conexión a la base de datos: " . $conexion->connect_error);
+}
+
+$conexion->set_charset("utf8");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["registrar"])) {
+    $curp = $_POST["curp"];
+    $nombre = $_POST["nombre"];
+    $contrasena = $_POST["contrasena"];
+    $confirmar_contrasena = $_POST["confirmar_contrasena"]; 
+    $tipo = $_POST["tipo"];
+    
+    if ($contrasena != $confirmar_contrasena) {
+        echo '<div class="alert alert-danger">Las contraseñas no coinciden. Por favor, intenta de nuevo.</div>';
+        exit;
     } else {
-        $usuario=$_POST["usuario"];
-        $contraseña=$_POST["password"];
-        $sql=$conexion->query("select * from usuarios where usuario='$usuario' and contraseña='$contraseña'");
-        if ($datos=$sql->fetch_object()){
-            header("location: clases.html");
+        $hash_contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
+        
+        $query = "INSERT INTO usuarios (nombre, curp, contrasena, tipo) VALUES ('$nombre', '$curp', '$hash_contrasena', '$tipo')";
+        
+        if ($conexion->query($query) === TRUE) {
+            echo '<div class="alert alert-success">Usuario registrado exitosamente.</div>';
         } else {
-            echo '<div class="alert alert-danger">Acceso denegado</div>';
-        }
-    }
-    if (empty($_POST["usuario"]) and empty($_POST["password"])){
-        echo '<div class="alert alert-danger">Estan vacios los campos</div>';
-    } else {
-        $usuario=$_POST["usuario"];
-        $contraseña=$_POST["password"];
-        $sql=$conexion->query("select * from maestros where usuario='$usuario' and contraseña='$contraseña'");
-        if ($datos=$sql->fetch_object()){
-            header("location: docente.html");
-        } else {
-            echo '<div class="alert alert-danger">Acceso denegado</div>';
+            echo '<div class="alert alert-danger">Error al registrar usuario: ' . $conexion->error . '</div>';
         }
     }
 }
+
+// Inicio de sesión
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btningresar"])) {
+    $curp = $_POST["curp"];
+    $contrasena = $_POST["contrasena"];
+    
+    $sql = $conexion->prepare("SELECT contrasena, tipo FROM usuarios WHERE curp=?");
+    $sql->bind_param("s", $curp);
+    $sql->execute();
+    $sql->bind_result($hash_contrasena, $tipo);
+    
+    if ($sql->fetch()) {
+        if (password_verify($contrasena, $hash_contrasena)) {
+            if ($tipo == 1) {
+                header("location: docente.html");
+                exit; 
+            } elseif ($tipo == 2) {
+                header("location: clases.html");
+                exit; 
+            }
+        } else {
+            echo '<div class="alert alert-danger">Contraseña incorrecta</div>';
+        }
+    } else {
+        echo '<div class="alert alert-danger">Usuario no encontrado</div>';
+    }
+    
+    $sql->close();
+}
+
+$conexion->close();
 ?>
