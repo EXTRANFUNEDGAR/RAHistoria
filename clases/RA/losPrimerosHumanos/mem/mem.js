@@ -12,18 +12,18 @@ let secondCard = false;
 
 
 const items = [
-  { name: "bee", image: "img/1.jpg" },
-  { name: "crocodile", image: "img/2.jpg" },
-  { name: "macaw", image: "img/3.jpg" },
-  { name: "gorilla", image: "img/4.jpg" },
-  { name: "tiger", image: "img/5.jpg" },
-  { name: "monkey", image: "img/6.jpg" },
-  { name: "chameleon", image: "img/7.jpg" },
-  { name: "piranha", image: "img/8.jpg" },
-  { name: "anaconda", image: "img/9.jpg" },
-  { name: "sloth", image: "img/10.jpg" },
-  { name: "cockatoo", image: "img/11.jpg" },
-  { name: "toucan", image: "img/12.jpg" },
+  { name: "img1", image: "img/1_1.jpg" },
+  { name: "img2", image: "img/2_2.jpg" },
+  { name: "img3", image: "img/3_3.jpg" },
+  { name: "img4", image: "img/4_4.jpg" },
+  { name: "img5", image: "img/5_5.jpg" },
+  { name: "img6", image: "img/6_6.jpg" },
+  { name: "img7", image: "img/7_7.jpg" },
+  { name: "img8", image: "img/8_8.jpg" },
+  { name: "img9", image: "img/9_9.jpg" },
+  { name: "img10", image: "img/10_10.jpg" },
+  { name: "img11", image: "img/11_11.jpg" },
+  { name: "img12", image: "img/12_12.jpg" },
 ];
 
 
@@ -82,8 +82,9 @@ const matrixGenerator = (cardValues, size = 4) => {
      <div class="card-container" data-card-value="${cardValues[i].name}">
         <div class="card-before">?</div>
         <div class="card-after">
-        <img src="${cardValues[i].image}" class="image"/></div>
+        <img src="${cardValues[i].image}" class="image" width="256px" height="256px"/></div>
      </div>
+
      `;
   }
 
@@ -93,6 +94,8 @@ const matrixGenerator = (cardValues, size = 4) => {
   cards = document.querySelectorAll(".card-container");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
+
+
      
       if (!card.classList.contains("matched")) {
         
