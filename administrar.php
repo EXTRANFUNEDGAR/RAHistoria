@@ -60,13 +60,14 @@ if ($conn->connect_error) {
 } 
 
 
-$sql = "SELECT usuarios.id_usuario, usuarios.curp, usuarios.tipo, avance1.avance AS aTema1, avance2.avance AS aTema2 FROM usuarios LEFT JOIN avance AS avance1 ON usuarios.id_usuario = avance1.id_usuario AND avance1.id_tema = '1' LEFT JOIN avance AS avance2 ON usuarios.id_usuario = avance2.id_usuario AND avance2.id_tema = '2';";
+$sql = "SELECT usuarios.id_usuario, usuarios.nombre, usuarios.tipo, avance1.avance AS aTema1, avance2.avance AS aTema2 FROM usuarios LEFT JOIN avance AS avance1 ON usuarios.id_usuario = avance1.id_usuario AND avance1.id_tema = '1' LEFT JOIN avance AS avance2 ON usuarios.id_usuario = avance2.id_usuario AND avance2.id_tema = '2';";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     
     while($row = $result->fetch_assoc()) {
-        echo $row["curp"]."<br>";
+        echo $row["aTema1"];
+        echo $row["nombre"]."<br>";
         
         echo "Los Primero Humanos &nbsp;&nbsp;&nbsp;&nbsp;"." Mexico Antiguo&nbsp;"."<br>"; 
         echo "<progress max='10' value='" . $row["aTema1"] . "'></progress> " . $row["aTema1"] . "%&nbsp; " . "<progress max='10' value='" . $row["aTema2"] . "'></progress> " . $row["aTema2"] . "%&nbsp;";
