@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memorama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="mem.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="stats-container">
+        <div id="moves-count"></div>
+        <div id="Tiempo"></div>
+      </div>
+      <div class="game-container"></div>
+      <div class="selected-cards">
+        <div id="first-card-placeholder" class="card-placeholder"></div>
+        <div id="second-card-placeholder" class="card-placeholder"></div>
+      </div>
+      <button id="stop" class="hide">Pausa</button>
+    </div>
+    <div class="controls-container">
+      <p id="result"></p>
+      <button id="start">Iniciar</button>
+    </div>
+    <script src="mem.js"></script>
+  </body>
+</html>
