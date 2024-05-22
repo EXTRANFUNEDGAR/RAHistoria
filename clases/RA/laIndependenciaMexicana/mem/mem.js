@@ -41,12 +41,12 @@ const timeGenerator = () => {
   }
   let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
   let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-  timeValue.innerHTML = `<span>Tiempo:</span>${minutesValue}:${secondsValue}`;
+  timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
 };
 
 const movesCounter = () => {
   movesCount += 1;
-  moves.innerHTML = `<span>Movimientos:</span>${movesCount}`;
+  moves.innerHTML = `<span>Moves:</span>${movesCount}`;
 };
 
 const generateRandom = (size = 4) => {
@@ -127,7 +127,7 @@ startButton.addEventListener("click", () => {
   stopButton.classList.remove("hide");
   startButton.classList.add("hide");
   interval = setInterval(timeGenerator, 1000);
-  moves.innerHTML = `<span>Movimientos:</span> ${movesCount}`;
+  moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
   initializer();
 });
 
