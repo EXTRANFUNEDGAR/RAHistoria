@@ -11,36 +11,35 @@
 </head>
 <body>
     <font face="Century Gothic">
+        
+    
         <div id="pregunta">
-            <h2>¿De qué continente llegaron los primeros humanos a América?</h2>
+            <h2>?Se usaron cañones durante la independencia mexicana?</h2>
         </div>
         <div id="respuesta">
-            <form id="form" method="post" action="subir.php">
-                <input type="radio" id="Africa" name="res" value="Africa">
-                <label for="Africa">África</label>
-                <input type="radio" id="Asia" name="res" value="Asia">
-                <label for="Asia">Asia</label>
-                <input type="radio" id="Europa" name="res" value="Europa">
-                <label for="Europa">Europa</label>
+            <form id="form" method="get" action="procesar_respuesta.php">
+                <input type="radio" id="Si" name="res" value="Si">
+                <label for="Si">Si</label>
+                <input type="radio" id="No" name="res" value="No">
+                <label for="No">No</label>
                 <br>
                 <input class="button-55" role="button" id="enviar" type="submit" value="Enviar">
             </form>
         </div>
     </font>
-    <div id="mensaje"></div>
-    <a-scene arjs>
-        <a-marker preset="hiro">
-            <a-entity position="0 0 0" scale="1 1 1" rotation="270 90 270">
-                <a-entity position="0 0 0" scale="1" gltf-model="../modelos/cara.glb"></a-entity>
-            </a-entity>
-        </a-marker>
-        <a-marker type='pattern' url='../marcadores/pattern-027.patt'>
-            <a-entity position="0 0 0" scale="2 2 2" rotation="270 0 0">
-                <a-entity position="0 0 0" scale="1" gltf-model="./modelos/mammoth.glb"></a-entity>
-            </a-entity>
-        </a-marker>
-        <a-entity camera look-controls position="0 0 0"></a-entity>
-    </a-scene>
+        <a-scene arjs>
+            <a-marker preset="hiro">
+                <a-entity position="0 0 0" scale="0.2 0.2 0.2" rotation="0 90 270">
+                    <a-entity position="0 0 0" scale="1" gltf-model="../modelos/canon1.glb"></a-entity>
+                </a-entity>
+            </a-marker>
+            <a-marker type='pattern' url='../marcadores/pattern169.patt'>
+                <a-entity position="0 0 0" scale="2 2 2" rotation="270 0 0">
+                    <a-entity position="0 0 0" scale="1" gltf-model="../modelos/winchester_1873.glb"></a-entity>
+                </a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
 
     <script>
         function enviarRespuesta(valor) {

@@ -20,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["respuesta"]) && $_POST
     $id_tema = 1; 
     $avance = 1;
 
+    sleep(2);
+
     if ($stmt->execute()) {
         // Redirigir a la página después de la ejecución exitosa
         header("Location: http://localhost/RAHistoria/clases/losPrimerosHumanos.html");

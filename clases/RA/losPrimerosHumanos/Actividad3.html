@@ -12,16 +12,14 @@
 <body>
     <font face="Century Gothic">
         <div id="pregunta">
-            <h2>¿De qué continente llegaron los primeros humanos a América?</h2>
+            <h2>¿Los primeros grupos humanos eran?</h2>
         </div>
         <div id="respuesta">
             <form id="form" method="post" action="subir.php">
-                <input type="radio" id="Africa" name="res" value="Africa">
-                <label for="Africa">África</label>
-                <input type="radio" id="Asia" name="res" value="Asia">
-                <label for="Asia">Asia</label>
-                <input type="radio" id="Europa" name="res" value="Europa">
-                <label for="Europa">Europa</label>
+                <input type="radio" id="Sedentarios" name="res" value="Sedentarios">
+                <label for="Sedentarios">Sedentarios</label>
+                <input type="radio" id="Nomadas" name="res" value="Nomadas">
+                <label for="Nomadas">Nomadas</label>
                 <br>
                 <input class="button-55" role="button" id="enviar" type="submit" value="Enviar">
             </form>
@@ -31,12 +29,12 @@
     <a-scene arjs>
         <a-marker preset="hiro">
             <a-entity position="0 0 0" scale="1 1 1" rotation="270 90 270">
-                <a-entity position="0 0 0" scale="1" gltf-model="../modelos/cara.glb"></a-entity>
+                <a-entity position="0 0 0" scale="1" gltf-model="./models/caveman.glb"></a-entity>
             </a-entity>
         </a-marker>
         <a-marker type='pattern' url='../marcadores/pattern-027.patt'>
             <a-entity position="0 0 0" scale="2 2 2" rotation="270 0 0">
-                <a-entity position="0 0 0" scale="1" gltf-model="./modelos/mammoth.glb"></a-entity>
+                <a-entity position="0 0 0" scale="1" gltf-model="./models/caveman.glb"></a-entity>
             </a-entity>
         </a-marker>
         <a-entity camera look-controls position="0 0 0"></a-entity>
@@ -66,13 +64,13 @@
             
             if(respuesta) {
                 respuesta = respuesta.value;
-                if (respuesta === "Asia") {
+                if (respuesta === "Nomadas") {
                     // Envía un 1 al archivo PHP si la respuesta es correcta
                     enviarRespuesta(1);
                     mensaje.innerText = "¡Felicidades! Respuesta correcta.";
                     mensaje.style.backgroundColor = "rgba(0, 128, 0, 0.8)"; 
                     setTimeout(function() {
-                window.location.href = "mem/memoria.html";
+                //window.location.href = "mem/memoria.html";
             }, 1000); 
                 } else {
                     mensaje.innerText = "¡Suerte para la próxima!";
