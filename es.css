@@ -1,4 +1,6 @@
-
+*{
+    font-family: Century Gothic;
+}
 /* es.css */
 .izqa { 
     float: left;
@@ -92,6 +94,7 @@
 
 /* Estilos para la clase card-group */
 .card-group {
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -117,8 +120,10 @@
     margin-right: 15px;
     margin-bottom: 0;
     margin-left: 15px;
-    width: calc(23.333% - 30px); /* Ajusta el ancho según sea necesario */
-    max-width: calc(23.333% - 30px); /* Ajusta el ancho máximo según sea necesario */
+    width: calc(33.333% - 30px); 
+    max-width: calc(33.333% - 30px); 
+    min-width: 250px;
+    margin: 20px;
 }
 
 
