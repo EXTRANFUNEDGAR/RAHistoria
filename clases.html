@@ -16,10 +16,9 @@
         <div id="izq">
         <a class="button-55" href="javascript: history.go(-1)">Volver atrás</a>
         <a href="index.php"  class="button-55" >Inicio</a>
-        <a href="index.php"  class="button-55" >Cerrar Sesion</a>
+        <a href="" id="logoutButton" class="button-55">Cerrar Sesión</a>
     </div>
         <div class="logo">
-
             <img src="Recursos/juarez.png" alt="Primaria Benito Juarez">
         </div>
         <nav class="menu">
@@ -37,7 +36,6 @@
 
     </header>
 
-
     <aside class="dera">
         <br>
         <div class="der">
@@ -49,12 +47,10 @@
                 <br>
                 <input class="button-55" role="button" id="enviar" type="submit" value="Entrar">
             </form>
-
         </div>
     </aside>
 
-<br>
-
+    <br>
 
     <div class="card-group" id="izquierda">
         <div class="card">
@@ -85,8 +81,31 @@
         </div>
         
     </div>
-</font>
+    </font>
+
     <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            deleteCookie("session");
+            window.location.href = "index.php"; 
+        });
+        
+        function checkSession() {
+            if (!document.cookie.includes("session=")) {
+                window.location.href = "index.php"; 
+            }
+        }
+
+        document.addEventListener("visibilitychange", function() {
+            if (document.visibilityState === 'visible') {
+                checkSession();
+            }
+        });
+
+        function deleteCookie(name) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        }
+        checkSession();
+
         function enviarDatoSeleccionado(selectId) {
             var selectedValue = document.getElementById(selectId).value;
             
@@ -96,23 +115,14 @@
                 'elemento3': 'clases/laIndependenciaMexicana.html',
                 'elemento4': 'games/mem/memoria.html',
                 'elemento5': 'games/ahorcado/a.html'
-                
-                
             };
-    
+
             var selectedPageUrl = pageUrls[selectedValue];
-    
-            
+
             window.location.href = selectedPageUrl;
-            
-           
+
             return false;
         }
-
-
     </script>
-    
-
-    
 </body>
 </html>

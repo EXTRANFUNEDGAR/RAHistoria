@@ -108,7 +108,6 @@
             <!--<img src="img/avatar.svg">-->
             <h2 class="title">BIENVENIDO</h2>
             <?php
-            include("conexion.php");
             include("controlador.php");
             ?>
             <div class="input-div one">

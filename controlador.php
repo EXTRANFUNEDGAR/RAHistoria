@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $conexion = new mysqli("localhost", "root", "", "ra_db");
 
 if ($conexion->connect_error) {
@@ -42,6 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btningresar"])) {
     
     if ($sql->fetch()) {
         if (password_verify($contrasena, $hash_contrasena)) {
+            $_SESSION['usuario'] = $curp;
+            setcookie("session", $curp, time() + (86400 * 30), "/");
+            echo "Cookie creada";
             if ($tipo == 1) {
                 header("location: docente.html");
                 exit; 
@@ -49,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btningresar"])) {
                 header("location: clases.html");
                 exit; 
             }
+            exit;
         } else {
             echo '<div class="alert alert-danger">Contraseña incorrecta</div>';
         }
