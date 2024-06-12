@@ -129,6 +129,26 @@
 
             return false;
         }
+        // Función para obtener el valor de una cookie específica
+function getCookie(session) {
+    let cookieArr = document.cookie.split(";");
+
+    for(let i = 0; i < cookieArr.length; i++) {
+        let cookiePair = cookieArr[i].split("=");
+
+        // Elimina el espacio al principio de la cookie y compara el nombre
+        if(session === cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+
+    // Devuelve null si no se encuentra la cookie
+    return null;
+}
+
+// Obtener el valor de la cookie 'curp'
+let curpValue = getCookie("session");
+console.log("Valor de la cookie curp: " + curpValue);
     </script>
 </body>
 </html>
