@@ -45,18 +45,30 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 } 
 
-$sql = "SELECT usuarios.id_usuario, usuarios.nombre, usuarios.tipo, avance1.avance AS aTema1, avance2.avance AS aTema2 
+$sql = "SELECT usuarios.id_usuario, usuarios.nombre, usuarios.tipo, 
+               avance1.avance AS aTema1, avance2.avance AS aTema2,
+               avance3.avance AS aTema3, avance4.avance AS aTema4,
+               avance5.avance AS aTema5, avance6.avance AS aTema6
         FROM usuarios 
         LEFT JOIN avance AS avance1 ON usuarios.id_usuario = avance1.id_usuario AND avance1.id_tema = '1' 
-        LEFT JOIN avance AS avance2 ON usuarios.id_usuario = avance2.id_usuario AND avance2.id_tema = '2';";
+        LEFT JOIN avance AS avance2 ON usuarios.id_usuario = avance2.id_usuario AND avance2.id_tema = '2'
+        LEFT JOIN avance AS avance3 ON usuarios.id_usuario = avance3.id_usuario AND avance3.id_tema = '3'
+        LEFT JOIN avance AS avance4 ON usuarios.id_usuario = avance4.id_usuario AND avance4.id_tema = '4'
+        LEFT JOIN avance AS avance5 ON usuarios.id_usuario = avance5.id_usuario AND avance5.id_tema = '5'
+        LEFT JOIN avance AS avance6 ON usuarios.id_usuario = avance6.id_usuario AND avance6.id_tema = '6';";
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo $row["nombre"] . "<br>";
-        echo "Los Primeros Humanos &nbsp;&nbsp;&nbsp;&nbsp; Mexico Antiguo&nbsp;<br>"; 
-        echo "<progress max='10' value='" . $row["aTema1"] . "'></progress> " . $row["aTema1"] . "%&nbsp; ";
-        echo "<progress max='10' value='" . $row["aTema2"] . "'></progress> " . $row["aTema2"] . "%&nbsp;";
+        echo "Los Primeros Humanos &nbsp;&nbsp;&nbsp;&nbsp; Mexico Antiguo&nbsp; La Conquista; La independencia Mexicana; Guerra de Reforma&nbsp; Revolucion Mexicana&nbsp;<br>"; 
+        echo "<progress max='100' value='" . $row["aTema1"] . "'></progress> " . $row["aTema1"] . "%&nbsp; ";
+        echo "<progress max='100' value='" . $row["aTema2"] . "'></progress> " . $row["aTema2"] . "%&nbsp;";
+        echo "<progress max='100' value='" . $row["aTema3"] . "'></progress> " . $row["aTema3"] . "%&nbsp;";
+        echo "<progress max='100' value='" . $row["aTema4"] . "'></progress> " . $row["aTema4"] . "%&nbsp;";
+        echo "<progress max='100' value='" . $row["aTema5"] . "'></progress> " . $row["aTema5"] . "%&nbsp;";
+        echo "<progress max='100' value='" . $row["aTema6"] . "'></progress> " . $row["aTema6"] . "%&nbsp;";
         echo "<br>";
     }
 } else {
