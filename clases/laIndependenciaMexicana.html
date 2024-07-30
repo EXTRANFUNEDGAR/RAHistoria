@@ -142,6 +142,10 @@
         }
         
         checkSession();
+        console.log("----------");
+        console.log(document.cookie);
+        var nam = document.cookie;
+        console.log(nam);
         
         function enviarDatoSeleccionado(selectId) {
             var selectedValue = document.getElementById(selectId).value;

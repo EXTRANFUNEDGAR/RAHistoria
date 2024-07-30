@@ -1,3 +1,62 @@
+<script>
+    function getCookie(session) {
+    let cookieArr = document.cookie.split(";");
+
+    for(let i = 0; i < cookieArr.length; i++) {
+        let cookiePair = cookieArr[i].split("=");
+
+        // Elimina el espacio al principio de la cookie y compara el nombre
+        if(session === cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+
+    // Devuelve null si no se encuentra la cookie
+    return null;
+}
+// Obtener el valor de la cookie 'curp'
+let curpValue = getCookie("session");
+console.log("Valor de la cookie curp: " + curpValue);
+</script>
+
+
+<?php
+require('config.php');
+
+
+
+foreach ($lineas as $linea) {
+    $cantidad_registros = count($lineas);
+    $cantidad_regist_agregados =  ($cantidad_registros - 1);
+
+    if ($i != 0) {
+
+        $datos = explode(";", $linea);
+       
+        $nombre = !empty($datos[0])  ? ($datos[0]) : '';
+		$curp   = !empty($datos[1])  ? ($datos[1]) : '';
+        $contrasena = !empty($datos[2])  ? ($datos[2]) : '';
+        $tipo   =   !empty( $datos[3]) ? $datos[3] : '';
+
+$insertarData = "INSERT INTO usuarios( 
+   nombre,
+    curp,
+    contrasena,
+    tipo
+) VALUES(
+    '$nombre',
+    '$curp',
+    '$contrasena',
+    '$tipo'
+)";
+mysqli_query($con, $insertarData);
+} 
+ $i++;
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,26 +191,9 @@
 
             return false;
         }
-        // Función para obtener el valor de una cookie específica
-function getCookie(session) {
-    let cookieArr = document.cookie.split(";");
+        /
 
-    for(let i = 0; i < cookieArr.length; i++) {
-        let cookiePair = cookieArr[i].split("=");
 
-        // Elimina el espacio al principio de la cookie y compara el nombre
-        if(session === cookiePair[0].trim()) {
-            return decodeURIComponent(cookiePair[1]);
-        }
-    }
-
-    // Devuelve null si no se encuentra la cookie
-    return null;
-}
-
-// Obtener el valor de la cookie 'curp'
-let curpValue = getCookie("session");
-console.log("Valor de la cookie curp: " + curpValue);
     </script>
 </body>
 </html>
