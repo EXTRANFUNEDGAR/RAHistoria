@@ -45,7 +45,7 @@
     <script>
         function enviarRespuesta(valor) {
             var form = document.createElement("form");
-            form.setAttribute("method", "post");
+            form.setAttribute("method", "get");
             form.setAttribute("action", "subir.php");
 
             var input = document.createElement("input");
@@ -64,16 +64,15 @@
             var respuesta = document.querySelector('input[name="res"]:checked');
             var mensaje = document.getElementById("mensaje");
             
-            if(respuesta) {
+            if (respuesta) {
                 respuesta = respuesta.value;
                 if (respuesta === "Asia") {
-                    // Envía un 1 al archivo PHP si la respuesta es correcta
                     enviarRespuesta(1);
                     mensaje.innerText = "¡Felicidades! Respuesta correcta.";
                     mensaje.style.backgroundColor = "rgba(0, 128, 0, 0.8)"; 
                     setTimeout(function() {
-                window.location.href = "mem/memoria.html";
-            }, 1000); 
+                        window.location.href = "subir.php";
+                    }, 1000); 
                 } else {
                     mensaje.innerText = "¡Suerte para la próxima!";
                     mensaje.style.backgroundColor = "rgba(255, 0, 0, 0.8)"; 
@@ -84,7 +83,6 @@
             }
             
             mensaje.style.display = "block"; 
-            
         });
     </script>
 </body>

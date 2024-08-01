@@ -13,6 +13,7 @@
     background-color: #0099ff;
   }
   .wrapper {
+    margin-top: 10px;
     box-sizing: content-box;
     width: 26.87em;
     padding: 2.5em 3em;

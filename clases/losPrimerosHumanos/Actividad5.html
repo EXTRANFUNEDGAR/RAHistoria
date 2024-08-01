@@ -45,7 +45,7 @@
     <script>
         function enviarRespuesta(valor) {
             var form = document.createElement("form");
-            form.setAttribute("method", "post");
+            form.setAttribute("method", "get");
             form.setAttribute("action", "subir.php");
 
             var input = document.createElement("input");
@@ -68,7 +68,7 @@
                 respuesta = respuesta.value;
                 if (respuesta === "Mamut  ") {
                     // Envía un 1 al PHP si la respuesta es correcta
-                    enviarRespuesta(1);
+                    enviarRespuesta(5);
                     mensaje.innerText = "¡Felicidades! Respuesta correcta.";
                     mensaje.style.backgroundColor = "rgba(0, 128, 0, 0.8)"; 
                     setTimeout(function() {
