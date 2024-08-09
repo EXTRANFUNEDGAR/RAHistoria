@@ -9,14 +9,16 @@ ctx.canvas.width = 0;
 ctx.canvas.height = 0;
 
 const wordsWithQuestions = {
-    'Miguel Hidalgo': '¿Quién es conocido como el Padre de la Patria en México?',
-    '16 de Septiembre de 1810': '¿En qué fecha inicio la guerra de independencia?',
-    'Siervo de la Nacion': '¿Cómo era conocido también José María Morelos y Pavón?',
-    'Independencia de Mexico': '¿Qué celebramos en México el 16 de septiembre?',
-    'Morelos': '¿Quién convocó el Primer Congreso de Anáhuac?',
-    'Morelos': '¿Quién escribió los Sentimientos de la Nación ?',
+    'Miguel Hidalgo': '¿Quién inició el movimiento de independencia en México?',
+    '1810': '¿En qué año comenzó la Guerra de Independencia de México?',
+    'El Grito de Dolores': '¿Qué evento marcó el inicio de la independencia de México?',
+    '1821': '¿En qué año se terminó la independencia de México?',
+    'Morelos': '¿Qué líder siguió a Hidalgo en la lucha por la independencia?',
+    'Morelos': '¿Quién escribió los Sentimientos de la Nación?',
     'Agustin de Iturbide': '¿Quién fue el primer emperador de México?',
-    'Agustin de Iturbide': '¿Quién escribió El Plan de Iguala?'
+    'Agustin de Iturbide': '¿Quién escribió El Plan de Iguala?',
+    'Los Tratados de Córdoba': '¿Qué tratado reconoció la independencia de México?',
+    'Batalla de Monte de las Cruces': '¿Qué batalla fue decisiva para la independencia de México?'
 };
 
 const bodyParts = [
