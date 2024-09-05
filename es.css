@@ -27,9 +27,7 @@
     height: auto;
 }
 
-.card-body {
-    padding: 1rem;
-}
+
 
 .card-title {
     font-size: 1.25rem;
@@ -658,10 +656,7 @@ body {
     padding: 1rem;
 }
 
-.card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
+
 
 .progress-bar {
     border: 1px solid #ccc;
