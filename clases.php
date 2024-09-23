@@ -55,11 +55,11 @@
                             <label for="seleccionA">Selecciona la clase:</label>
                             <select class="form-control" id="seleccionA">
                                 <option value="elemento1">Los primeros Humanos</option> <!-- Edgar -->
-                                <option value="elemento4">Pueblos y culturas del Mexico Antiguo</option> <!-- Edgar -->
-                                <option value="elemento5">La Conquista</option> <!-- Emmanuel -->
-                                <option value="elemento3">La independencia Mexicana</option> <!-- Emmanuel -->
-                                <option value="elemento6">Guerra de Reforma</option> <!-- Emmanuel -->
-                                <option value="elemento2">Revolucion Mexicana</option> <!-- Edgar -->
+                                <option value="elemento2">Pueblos y culturas del Mexico Antiguo</option> <!-- Edgar -->
+                                <option value="elemento3">La Conquista</option> <!-- Emmanuel -->
+                                <option value="elemento4">La independencia Mexicana</option> <!-- Emmanuel -->
+                                <option value="elemento5">Guerra de Reforma</option> <!-- Emmanuel -->
+                                <option value="elemento6">Revolucion Mexicana</option> <!-- Edgar -->
                                 
                                 
                                 
@@ -123,7 +123,8 @@
                 'elemento2': 'clases/RA/clase2.html',
                 'elemento3': 'clases/laIndependenciaMexicana.html',
                 'elemento4': 'games/mem/memoria.html',
-                'elemento5': 'games/ahorcado/a.html'
+                'elemento5': 'games/ahorcado/a.html',
+                'elemento6': 'clases/revolucionMexicana.html'
             };
 
             var selectedPageUrl = pageUrls[selectedValue];
