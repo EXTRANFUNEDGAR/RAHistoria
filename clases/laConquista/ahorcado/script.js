@@ -73,7 +73,24 @@ const correctLetter = letter => {
             hits++;
         }
     }
-    if (hits === selectedWord.length) endGame("¡Felicidades! colocaste la respuesta correcta: " + selectedWord.join(""));
+    if (hits === selectedWord.length) endGame("¡Felicidades! colocaste la respuesta correcta: " + selectedWord.join(""));{
+        function enviarRespuesta(valor) {
+            var form = document.createElement("form");
+            form.setAttribute("method", "get");
+            form.setAttribute("action", "subir.php");
+    
+            var input = document.createElement("input");
+            input.setAttribute("type", "hidden");
+            input.setAttribute("name", "respuesta");
+            input.setAttribute("value", valor);
+    
+            form.appendChild(input);
+            document.body.appendChild(form);
+    
+            form.submit();
+        }
+    }
+    
 }
 
 const letterInput = letter => {

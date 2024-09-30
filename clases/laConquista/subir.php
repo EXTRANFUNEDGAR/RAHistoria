@@ -35,7 +35,7 @@ if ($id_usuario !== null) {
 }
 //id_usuario
 
-$sql = "SELECT avance FROM avance WHERE id_usuario = '$id_usuario' AND id_tema='1'";
+$sql = "SELECT avance FROM avance WHERE id_usuario = '$id_usuario' AND id_tema='3'";
 $result = mysqli_query($conexion, $sql);
 
 // Inicializar la variable
@@ -62,13 +62,13 @@ if ($avance !== null) {
 if($avance<=90){
 if(!empty($avance)){
     $avance = $avance +10;
-    $sql1="UPDATE avance SET avance='$avance' WHERE id_usuario = $id_usuario AND id_tema='1'";
+    $sql1="UPDATE avance SET avance='$avance' WHERE id_usuario = $id_usuario AND id_tema='3'";
 
     mysqli_query( $conexion,$sql1);
     echo"----";
     
 }else{
-    $sql1="INSERT INTO avance (id_usuario,id_tema,avance) VALUES ('$id_usuario','1','10')";
+    $sql1="INSERT INTO avance (id_usuario,id_tema,avance) VALUES ('$id_usuario','3','10')";
 
     mysqli_query( $conexion,$sql1);
 
