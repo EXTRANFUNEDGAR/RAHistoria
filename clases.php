@@ -1,3 +1,30 @@
+<?php
+require('config.php');
+
+// Verificar la conexión
+if (!$con) {
+    die("Error en la conexión: " . mysqli_connect_error());
+}
+
+// Definir la consulta
+$cons = "SELECT * FROM `clase_usuario`";
+
+// Ejecutar la consulta y verificar errores
+$result = mysqli_query($con, $cons);
+
+if (!$result) {
+    die("Error en la consulta: " . mysqli_error($con));
+} else {
+    // Procesar los resultados si es necesario
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Hacer algo con cada fila
+        print_r($row);
+    }
+}
+
+// Cerrar la conexión
+mysqli_close($con);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +68,7 @@
 
     <br>
     
+    
     <div class="card-group" id="izquierda" align='center'>
         <div class="card">
             <div class="p-3 mb-2 bg-dark text-white">
@@ -55,11 +83,11 @@
                             <label for="seleccionA">Selecciona la clase:</label>
                             <select class="form-control" id="seleccionA">
                                 <option value="elemento1">Los primeros Humanos</option> <!-- Edgar -->
-                                <option value="elemento4">Pueblos y culturas del Mexico Antiguo</option> <!-- Edgar -->
-                                <option value="elemento5">La Conquista</option> <!-- Emmanuel -->
-                                <option value="elemento3">La independencia Mexicana</option> <!-- Emmanuel -->
-                                <option value="elemento6">Guerra de Reforma</option> <!-- Emmanuel -->
-                                <option value="elemento2">Revolucion Mexicana</option> <!-- Edgar -->
+                                <option value="elemento2">Pueblos y culturas del Mexico Antiguo</option> <!-- Edgar -->
+                                <option value="elemento3">La Conquista</option> <!-- Emmanuel -->
+                                <option value="elemento4">La independencia Mexicana</option> <!-- Emmanuel -->
+                                <option value="elemento5">Guerra de Reforma</option> <!-- Emmanuel -->
+                                <option value="elemento6">Revolucion Mexicana</option> <!-- Edgar -->
                                 
                                 
                                 
@@ -123,7 +151,8 @@
                 'elemento2': 'clases/RA/clase2.html',
                 'elemento3': 'clases/laIndependenciaMexicana.html',
                 'elemento4': 'games/mem/memoria.html',
-                'elemento5': 'games/ahorcado/a.html'
+                'elemento5': 'games/ahorcado/a.html',
+                'elemento6': 'clases/revolucionMexicana.html'
             };
 
             var selectedPageUrl = pageUrls[selectedValue];

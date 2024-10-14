@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <link rel="stylesheet" href="../preguntas.css">
+</head>
+<body>
+    <font face="Century Gothic">
+        <div id="pregunta">
+            <h2>¿Qué artículo de la Constitución establece que la educación será gratuita?</h2>
+        </div>
+        <div id="respuesta">
+            <form id="form" method="post" action="subir.php">
+                <input type="radio" id="A1" name="res" value="A1">
+                <label for="A1">Artículo 123</label>
+                <input type="radio" id="B1" name="res" value="B1">
+                <label for="B1">Artículo 3</label>
+                <input type="radio" id="C1" name="res" value="C1">
+                <label for="C1">Artículo 130</label>
+                <br>
+                <input class="button-55" role="button" id="enviar" type="submit" value="Enviar">
+            </form>
+        </div>
+    </font>
+    <div id="mensaje"></div>
+    <a-scene arjs>
+        <a-marker preset="hiro">
+            <a-entity position="0 0 0" scale="1 1 1" rotation="270 90 270">
+                <a-entity position="0 0 0" scale="1" gltf-model="../modelos/cara.glb"></a-entity>
+            </a-entity>
+        </a-marker>
+        <a-marker type='pattern' url='../marcadores/pattern-027.patt'>
+            <a-entity position="0 0 0" scale="2 2 2" rotation="270 0 0">
+                <a-entity position="0 0 0" scale="1" gltf-model="./modelos/mammoth.glb"></a-entity>
+            </a-entity>
+        </a-marker>
+        <a-entity camera look-controls position="0 0 0"></a-entity>
+    </a-scene>
+
+    <script>
+        function enviarRespuesta(valor) {
+            var form = document.createElement("form");
+            form.setAttribute("method", "get");
+            form.setAttribute("action", "subir.php");
+
+            var input = document.createElement("input");
+            input.setAttribute("type", "hidden");
+            input.setAttribute("name", "respuesta");
+            input.setAttribute("value", valor);
+
+            form.appendChild(input);
+            document.body.appendChild(form);
+
+            form.submit();
+        }
+
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var respuesta = document.querySelector('input[name="res"]:checked');
+            var mensaje = document.getElementById("mensaje");
+            
+            if (respuesta) {
+                respuesta = respuesta.value;
+                if (respuesta === "B1") {
+                    enviarRespuesta(1);
+                    mensaje.innerText = "¡Felicidades! Respuesta correcta.";
+                    mensaje.style.backgroundColor = "rgba(0, 128, 0, 0.8)"; 
+                    setTimeout(function() {
+                        window.location.href = "subir.php";
+                    }, 1000); 
+                } else {
+                    mensaje.innerText = "¡Suerte para la próxima!";
+                    mensaje.style.backgroundColor = "rgba(255, 0, 0, 0.8)"; 
+                }
+            } else {
+                mensaje.innerText = "Por favor, seleccione una opción.";
+                mensaje.style.backgroundColor = "rgba(255, 165, 0, 0.8)";
+            }
+            
+            mensaje.style.display = "block"; 
+        });
+    </script>
+</body>
+</html>

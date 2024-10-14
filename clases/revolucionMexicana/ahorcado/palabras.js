@@ -1,0 +1,1 @@
+const words = ['Hidalgo','Benito Juarez','Independencia','Piramide'];
