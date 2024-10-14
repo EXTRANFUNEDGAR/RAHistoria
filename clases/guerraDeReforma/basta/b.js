@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const timerDisplay = document.getElementById('timer');
 
     function getRandomLetter() {
-        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const letters = "M";
         return letters[Math.floor(Math.random() * letters.length)];
     }
 
