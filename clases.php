@@ -1,3 +1,30 @@
+<?php
+require('config.php');
+
+// Verificar la conexión
+if (!$con) {
+    die("Error en la conexión: " . mysqli_connect_error());
+}
+
+// Definir la consulta
+$cons = "SELECT * FROM `clase_usuario`";
+
+// Ejecutar la consulta y verificar errores
+$result = mysqli_query($con, $cons);
+
+if (!$result) {
+    die("Error en la consulta: " . mysqli_error($con));
+} else {
+    // Procesar los resultados si es necesario
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Hacer algo con cada fila
+        print_r($row);
+    }
+}
+
+// Cerrar la conexión
+mysqli_close($con);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +67,7 @@
 
 
     <br>
+    
     
     <div class="card-group" id="izquierda" align='center'>
         <div class="card">
