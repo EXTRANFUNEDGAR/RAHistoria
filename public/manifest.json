@@ -1,0 +1,38 @@
+{
+    "name": "Sistema de Realidad Aumentada para el Aprendizaje de Historia en Niños de 5to Grado de primaria",
+    "shor_name": "Sistema de Realidad Aumentada",
+    "start_url": "./",
+    "description": "Sistema de Realidad Aumentada para el Aprendizaje de Historia en Niños de 5to Grado de primaria",
+    "display": "standalone",
+    "icons":[
+        {
+            "src": "../src/img/45.png",
+            "sizes": "45x45",
+            "type": "image/png"
+        },
+        {
+            "src": "../src/img/64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "../src/img/99.png",
+            "sizes": "99x99",
+            "type": "image/png"
+        },
+        {
+            "src": "../src/img/144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "related_applications": [
+        {
+            "plataform": "web"
+        },
+        {
+            "plataform": "localhost",
+            "url": "localhost"
+        }
+    ] 
+}

@@ -1,0 +1,88 @@
+/* Contenedor principal */
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/wave2.png'); /* Cambiar la imagen de fondo por una más apropiada para niños */
+    background-size: cover; 
+    background-position: center; 
+ }
+
+ /* Contenido del formulario */
+ .login-content {
+    background: rgba(255, 255, 255, 0.8); /* Color de fondo */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1); /* Sombra */
+ }
+
+ /* Formulario */
+ form {
+    text-align: center;
+ }
+
+ /* Inputs */
+ .input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px;
+    outline: none;
+ }
+
+ /* Botón */
+ .btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #0099ff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+
+ .btn:hover {
+    background-color: #0077cc; /* Cambio de color al pasar el ratón */
+ }
+
+ /* Enlaces */
+ .font-italic {
+    font-style: italic;
+ }
+
+ .isai5 {
+    text-decoration: none;
+    color: #0099ff; /* Color del texto */
+ }
+
+ .isai5:hover {
+    color: #0077cc; /* Cambio de color al pasar el ratón */
+ }
+
+ /* Icono de usuario */
+ .fa-user {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0099ff; /* Color del icono */
+ }
+
+ /* Icono de visualización de contraseña */
+ .fa-lock {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0099ff; /* Color del icono */
+ }
+
+ /* Estilo para ocultar el texto del campo cuando se ingresa texto */
+ .hidden {
+    display: none;
+ }
