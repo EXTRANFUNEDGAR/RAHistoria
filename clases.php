@@ -1,28 +1,28 @@
 <?php
 require('config.php');
 
-// Verificar la conexión
+
 if (!$con) {
     die("Error en la conexión: " . mysqli_connect_error());
 }
 
-// Definir la consulta
+
 $cons = "SELECT * FROM `clase_usuario`";
 
-// Ejecutar la consulta y verificar errores
+
 $result = mysqli_query($con, $cons);
 
 if (!$result) {
     die("Error en la consulta: " . mysqli_error($con));
 } else {
-    // Procesar los resultados si es necesario
+
     while ($row = mysqli_fetch_assoc($result)) {
-        // Hacer algo con cada fila
+
         print_r($row);
     }
 }
 
-// Cerrar la conexión
+
 mysqli_close($con);
 ?>
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ mysqli_close($con);
         </form>
     </div>
     <?php
-    // Este es un bloque de código PHP
+
     echo "<p>Hoy es " . date("l, d F Y") . "</p>";
 ?>
     </font>
@@ -161,24 +161,23 @@ mysqli_close($con);
 
             return false;
         }
-        // Función para obtener el valor de una cookie específica
+
 function getCookie(session) {
     let cookieArr = document.cookie.split(";");
 
     for(let i = 0; i < cookieArr.length; i++) {
         let cookiePair = cookieArr[i].split("=");
 
-        // Elimina el espacio al principio de la cookie y compara el nombre
+
         if(session === cookiePair[0].trim()) {
             return decodeURIComponent(cookiePair[1]);
         }
     }
 
-    // Devuelve null si no se encuentra la cookie
+
     return null;
 }
 
-// Obtener el valor de la cookie 'curp'
 let curpValue = getCookie("session");
 console.log("Valor de la cookie curp: " + curpValue);
     </script>
