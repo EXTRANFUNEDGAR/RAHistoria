@@ -172,10 +172,8 @@ if (mysqli_num_rows($result) > 0) {
             </div>
         </div> -->
         
-        <?php
-// Verificar si la consulta devuelve algún resultado
-if (mysqli_num_rows($result) < 1) {
-    ?>
+
+        <div style="background-color: #f0f0f0;">
         <form id="form" method="get" action="agregarClase.php">
             <label for="res">Crear de clase</label>
             <br>
@@ -184,6 +182,8 @@ if (mysqli_num_rows($result) < 1) {
             <br>
             <input class="button-55" role="button" id="enviar" type="submit" value="Entrar">
         </form>
+        </div>
+        <div>
         <form id="form" method="get" action="ingresarClase.php">
             <label for="ingresar">Ingresar clase</label>
             <br>
@@ -192,10 +192,7 @@ if (mysqli_num_rows($result) < 1) {
             <br>
             <input class="button-55" role="button" id="enviar" type="submit" value="Entrar">
         </form>
-    
-    <?php
-    }
-    ?>
+        </div>
 
 </div>
     </font>
