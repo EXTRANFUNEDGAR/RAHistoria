@@ -114,6 +114,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="card-body">
                     <h5 class="card-title">Clase: <?php echo $codigoClase; ?> </h5>
                     <a href="marcadores.html" class="button-55">Marcadores</a>
+                    <a href="administrar.php" class="button-55">Administrar</a>
                     <br>
                     <div class="container mt-4">
                         <div class="form-group">
@@ -171,9 +172,10 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
             </div>
         </div> -->
-        
-
-        <div style="background-color: #f0f0f0;">
+        <?php
+// Verificar si la consulta devuelve algún resultado
+if (mysqli_num_rows($result) < 1) {
+    ?>
         <form id="form" method="get" action="agregarClase.php">
             <label for="res">Crear de clase</label>
             <br>
@@ -182,8 +184,13 @@ if (mysqli_num_rows($result) > 0) {
             <br>
             <input class="button-55" role="button" id="enviar" type="submit" value="Entrar">
         </form>
-        </div>
-        <div>
+    
+    <?php
+    }
+    ?>
+
+
+        <!-- <div>
         <form id="form" method="get" action="ingresarClase.php">
             <label for="ingresar">Ingresar clase</label>
             <br>
@@ -192,10 +199,11 @@ if (mysqli_num_rows($result) > 0) {
             <br>
             <input class="button-55" role="button" id="enviar" type="submit" value="Entrar">
         </form>
-        </div>
+        </div> -->
 
 </div>
     </font>
+
 
     <script>
         document.getElementById('logoutButton').addEventListener('click', function() {

@@ -35,7 +35,7 @@ if ($id_usuario !== null) {
 }
 //id_usuario
 
-$sql = "SELECT avance FROM avance WHERE id_usuario = '$id_usuario' AND id_tema='1'";
+$sql = "SELECT avance FROM avance WHERE id_usuario = '$id_usuario' AND id_tema='6'";
 $result = mysqli_query($conexion, $sql);
 
 // Inicializar la variable

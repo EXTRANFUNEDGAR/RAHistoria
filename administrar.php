@@ -1,3 +1,41 @@
+<?php
+if (isset($_COOKIE['session'])) {
+    // valor de la cookie
+    $usuario = htmlspecialchars($_COOKIE['session']);
+    //echo " El valor de la cookie 'usuario' es: $usuario ";
+} else {
+   // echo " La cookie 'usuario' no está establecida.";
+}
+//id_usuario
+$conexion= mysqli_connect("localhost","root","","ra_db");
+
+$sql="SELECT id_usuario FROM usuarios WHERE curp = '$usuario'";
+$result=mysqli_query($conexion,$sql);
+
+$id_usuario = null;
+
+if ($result) {
+    $fila = $result->fetch_assoc();
+    if ($fila) {
+        $id_usuario = $fila["id_usuario"];
+    } else {
+       // echo "No se encontró el usuario.";
+    }
+} else {
+    //echo "Error en la consulta: " . mysqli_error($conexion);
+}
+
+if ($id_usuario !== null) {
+    //echo "ID de usuario: " . $id_usuario;
+}
+require('config.php');
+//id_usuario 
+
+if (!$con) {
+    die("Error en la conexión: " . mysqli_connect_error());
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,17 +84,21 @@
         die("Conexión fallida: " . $conn->connect_error);
     } 
     
-    $sql = "SELECT usuarios.id_usuario, usuarios.nombre, usuarios.tipo, 
-                   avance1.avance AS aTema1, avance2.avance AS aTema2,
-                   avance3.avance AS aTema3, avance4.avance AS aTema4,
-                   avance5.avance AS aTema5, avance6.avance AS aTema6
-            FROM usuarios 
-            LEFT JOIN avance AS avance1 ON usuarios.id_usuario = avance1.id_usuario AND avance1.id_tema = '1' 
-            LEFT JOIN avance AS avance2 ON usuarios.id_usuario = avance2.id_usuario AND avance2.id_tema = '2'
-            LEFT JOIN avance AS avance3 ON usuarios.id_usuario = avance3.id_usuario AND avance3.id_tema = '3'
-            LEFT JOIN avance AS avance4 ON usuarios.id_usuario = avance4.id_usuario AND avance4.id_tema = '4'
-            LEFT JOIN avance AS avance5 ON usuarios.id_usuario = avance5.id_usuario AND avance5.id_tema = '5'
-            LEFT JOIN avance AS avance6 ON usuarios.id_usuario = avance6.id_usuario AND avance6.id_tema = '6';";
+    $sql = "SELECT DISTINCT usuarios.id_usuario, usuarios.nombre, usuarios.tipo,
+       avance1.avance AS aTema1, avance2.avance AS aTema2,
+       avance3.avance AS aTema3, avance4.avance AS aTema4,
+       avance5.avance AS aTema5, avance6.avance AS aTema6
+FROM usuarios 
+JOIN clase_usuario ON usuarios.id_usuario = clase_usuario.id_usuario
+JOIN clases ON clase_usuario.id_clase = clases.id_clase
+LEFT JOIN avance AS avance1 ON usuarios.id_usuario = avance1.id_usuario AND avance1.id_tema = '1'
+LEFT JOIN avance AS avance2 ON usuarios.id_usuario = avance2.id_usuario AND avance2.id_tema = '2'
+LEFT JOIN avance AS avance3 ON usuarios.id_usuario = avance3.id_usuario AND avance3.id_tema = '3'
+LEFT JOIN avance AS avance4 ON usuarios.id_usuario = avance4.id_usuario AND avance4.id_tema = '4'
+LEFT JOIN avance AS avance5 ON usuarios.id_usuario = avance5.id_usuario AND avance5.id_tema = '5'
+LEFT JOIN avance AS avance6 ON usuarios.id_usuario = avance6.id_usuario AND avance6.id_tema = '6'
+WHERE clases.id_usuario = $id_usuario; 
+";
     
     $result = $conn->query($sql);
     
