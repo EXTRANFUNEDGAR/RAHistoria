@@ -49,10 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btningresar"])) {
             setcookie("session", $curp, time() + (86400 * 30), "/");
             echo "Cookie creada";
             if ($tipo == 1) {
-                header("location: clases.html");
+                header("location: clases.php");
                 exit; 
             } elseif ($tipo == 2) {
-                header("location: docente.html");
+                header("location: clasesMaestro.php");
                 exit; 
             }
             exit;
