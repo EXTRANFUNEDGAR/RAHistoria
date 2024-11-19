@@ -67,6 +67,8 @@ $result1 = mysqli_query($con, $cons1);
     <link rel="stylesheet" href="es.css">
     <link rel="stylesheet" href="Recursos/styles.css">
     <link rel="stylesheet" href="Recursos/w3.css">
+    <audio id="music-player" src="./music/GodIsDead_.mp3" autoplay loop></audio>
+    <script src="music.js"></script>
 </head>
 <body>
     <font face="Century Gothic">

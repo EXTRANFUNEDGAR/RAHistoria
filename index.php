@@ -9,6 +9,9 @@
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <link rel="manifest" href="./public/manifest.json">
   <link rel="stylesheet" href="./css/stylesIndex.css">
+  <audio id="music-player" src="./music/GodIsDead_.mp3" autoplay loop></audio>
+  <script src="music.js"></script>
+
 </head>
 <body>
 
