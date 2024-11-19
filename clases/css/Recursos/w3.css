@@ -1,0 +1,80 @@
+﻿body {
+    background-image: url('img/fondo_ninos.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    font-family: "Comic Sans MS", cursive, sans-serif; 
+  }
+  
+  .header {
+    background-color: #0099ff; 
+    padding: 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .logo img {
+    width: 100px; 
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu .nav-links li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .menu .nav-links li a {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu .nav-links li a:hover {
+    text-decoration: underline; 
+  }
+  
+  .content {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin: 20px; 
+    text-align: center; 
+  }
+  
+  .content .heading {
+    font-size: 24px; 
+    color: #0099ff; 
+    margin-bottom: 10px; 
+  }
+  
+  .content .texto {
+    font-size: 18px; 
+    color: #333; 
+  }
+  
+  .btn {
+    background-color: #0099ff !important; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    margin-top: 10px; 
+    transition: background-color 0.3s; 
+  }
+  
+  .btn:hover {
+    background-color: #0077cc; 
+  }
+  
