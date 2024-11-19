@@ -228,7 +228,7 @@ if (mysqli_num_rows($result) < 1) {
             
             var pageUrls = {
                 'elemento1': 'clases/losPrimerosHumanos.html',
-                'elemento2': 'clases/RA/clase2.html',
+                'elemento2': 'clases/MexicoAntiguo.html',
                 'elemento3': 'clases/laConquista.html',
                 'elemento4': 'clases/laIndependenciaMexicana.html',
                 'elemento5': 'clases/guerraDeReforma.html',
