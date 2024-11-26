@@ -83,10 +83,22 @@ switch ($num) {
         header('Location: actividad3.html');
     break;
     case 3:
-        header('Location: ahorcado/a.hmtl');
+        header('Location: ./ahorcado/a.html');
     break;
     case 4:
         header('Location: actividad5.html');
+    case 5:
+        echo "i equals 0";
+        header('Location: actividad6.html');
+    break;
+    case 6:
+        header('Location: actividad7.html');
+    break;
+    case 7:
+        header('Location: actividad8.html');
+    break;
+        case 8:
+        header('Location: actividad9.html');
     default:
     }
 
