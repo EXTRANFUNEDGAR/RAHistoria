@@ -1,5 +1,5 @@
 body {
-    background-image: url('img/fondo_ninos.jpg'); /* Cambiar la imagen de fondo por una más apropiada para niños */
+    background-image: url('/img/fondo.jpg'); /* Cambiar la imagen de fondo por una más apropiada para niños */
     background-size: cover; 
     background-position: center; 
     font-family: "Comic Sans MS", cursive, sans-serif; /* Utilizar una fuente más amigable y divertida */

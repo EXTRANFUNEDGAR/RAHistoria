@@ -1,105 +1,107 @@
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    
-    }
-
-
-.header{
-    background-color: #0099ff;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100px;
-    padding: 5px 10%;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #0099ff; 
+  color: #333;
 }
 
-.header .logo{
-    cursor: pointer;
-    margin-right: auto;
+h1 {
+  background-color: rgb(255, 186, 59); 
 }
 
-.header .logo img{
-    height: 80px;
-    width: auto;
-    transition: all 0.3s;
+/* HEADER */
+.header {
+  background-color: #0099ff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  padding: 5px 10%;
 }
 
-.header .logo img:hover{
-    transform: scale(1.2);
+.header .logo {
+  cursor: pointer;
+  margin-right: auto;
 }
 
-.header .nav-links #titulo
-{
+.header .logo img {
+  height: 80px;
+  width: auto;
+  transition: all 0.3s;
+}
 
+.header .logo img:hover {
+  transform: scale(1.2);
+}
+
+.header .nav-links #titulo {
   font-size: 700;
   color: #eceff1;
   position: relative;
- right: 410px;
+  right: 410px;
 }
 
-.header .nav-links{
-    list-style: none;
+.header .nav-links {
+  list-style: none;
 }
 
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;    
+.header .nav-links li {
+  display: inline-block;
+  padding: 0 20px;    
 }
 
-.header .nav-links li:hover{
-    transform: scale(1.1);
+.header .nav-links li:hover {
+  transform: scale(1.1);
 }
 
-.header .nav-links a{
-    font-size: 700;
-    color: #eceff1;
-    text-decoration: none;    
+.header .nav-links a {
+  font-size: 700;
+  color: #eceff1;
+  text-decoration: none;    
 }
 
-.header .nav-links li a:hover{
-    color: #ffbc0e;
+.header .nav-links li a:hover {
+  color: #ffbc0e;
 }
 
-/* DROPDOWN*/
+/* DROPDOWN */
 .header .nav-links ul {
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #0099ff;
-    display: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0099ff;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .header .nav-links li:hover > ul {
-    display: block;
+  display: block;
 }
 
 .header .nav-links ul li {
-    display: block;
-    width: 100%;
-    text-align: left;
+  display: block;
+  width: 100%;
+  text-align: left;
 }
 
 .header .nav-links ul li a {
-    padding: 10px;
-    color: #eceff1;
-    display: block;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  padding: 10px;
+  color: #eceff1;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
-.acceder {
+
+/* BUTTONS */
+.acceder, .registrar {
   --font-color: #323232;
   --bg-color: #fff;
   --main-color: #323232;
@@ -115,34 +117,25 @@ body {
   cursor: pointer;
 }
 
-.acceder:active {
+.acceder:active, .registrar:active {
   box-shadow: 0px 0px var(--main-color);
   transform: translate(3px, 3px);
 }
+
 .registrar {
-  --font-color: #323232;
-  --bg-color: #fff;
-  --main-color: #323232;
-  width: 120px;
-  height: 40px;
-  border-radius: 5px;
-  border: 2px solid var(--main-color);
-  background-color: var(--bg-color);
-  box-shadow: 4px 4px var(--main-color);
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--font-color);
-  cursor: pointer;
+  position: relative;
+  left: 25%;
+  top: 45px;
 }
 
-.registrar:active {
-  box-shadow: 0px 0px var(--main-color);
-  transform: translate(3px, 3px);
+.acceder {
+  position: relative;
+  left: 25%;
+  top: 5px;
 }
 
-.outer {
-    left: 100px;
-    top: -140px;
+/* CONTAINER */
+.outer, .Login {
   position: relative;
   display: flex;
   align-items: center;
@@ -157,6 +150,17 @@ body {
   transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
+.Login {
+  left: 60%;
+  top: 170px;
+}
+
+.outer:hover, .Login:hover {
+  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+  border-color: #0099ff;
+}
+
+/* CONTENT */
 .content {
   display: flex;
   flex-direction: column;
@@ -187,11 +191,6 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.outer:hover {
-  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
-  border-color: #0099ff;
-}
-
 .content .btn:hover {
   outline: 2px solid #0099ff;
   background: transparent;
@@ -202,57 +201,55 @@ body {
   box-shadow: none;
 }
 
-
-.Login {
-    left: 60%;
-    top: 170px;
-    height: 200px;
-  position: relative;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  width: 320px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  padding: 32px;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #FFFFFF;
-  border: 2px solid #313131;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+/* GAME AREA */
+.game-area {
+  display: none;
+  margin-top: 20px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  color: #000000;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
 }
 
-.content .heading {
-  font-weight: 700;
-  font-size: 32px;
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #0099ff; 
 }
 
-.content .texto {
-  line-height: 1.5;
+th {
+  background-color: #0099ff; 
+  color: #fff;
 }
 
-
-.Login:hover {
-  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
-  border-color: #0099ff;
+td {
+  background-color: #fff;
 }
 
-.registrar{
-    position: relative;
-    left: 25%;
-    top: 45px;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(255, 186, 59);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.acceder{
-    position: relative;
-    left: 25%;
-    top: 5px;
+button:hover {
+  background-color: #ff8c69;
+}
+
+#timer {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
 }

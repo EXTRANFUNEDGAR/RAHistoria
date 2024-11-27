@@ -1,11 +1,14 @@
 let timer; 
-let timeLeft = 30;
+let timeLeft = 90;
 
 const palabrasValidas = {
-    "personajes": ["MIGUEL HIDALGO", "BENITO JUAREZ", "EMILIANO ZAPATA", "PANCHO VILLA"],
-    "estados": ["MICHOACAN", "GUANAJUATO", "CHIAPAS", "YUCATÁN"],
-    "culturas": ["MAYA", "AZTECA", "TOLTECA", "ZAPOTECA"],
-    "monumentos": ["M","ÁNGEL DE LA INDEPENDENCIA", "PIRÁMIDE DE CHICHÉN ITZÁ", "PALACIO NACIONAL", "TEOTIHUACÁN"]
+    "personajes": ["ANTONIO LOPEZ DE SANTA ANNA", "ANASTASIO BUSTAMANTE", "ANDRES QUINTANA ROO", "ANGEL ALBINO CORZO", "ADOLFO LOPEZ MATEOS", "BENITO JUAREZ", "BONIFACIO GUTIERREZ", "BRUNO MARTINEZ", "BARTOLO VALENCIA", "BASILIO VADILLO", "MELCHOR OCAMPO", "MANUEL DOBLADO", "MIGUEL NEGRETE", "MARIANO ARISTA", "MARCOS CARRILLO", "TOMAS MEJIA", "TIBURCIO MONTIEL", "TEODORO DEHESA", "TADEO ORTIZ", "TRINIDAD GARCIA", "GUILLERMO PRIETO", "GUADALUPE VICTORIA", "GABRIEL LEYVA", "GENARO CODINA", "GREGORIO MENDEZ"],
+
+    "estados": ["AGUASCALIENTES", "BAJA CALIFORNIA", "BAJA CALIFORNIA SUR", "MICHOACAN", "MORELOS", "TAMAULIPAS", "TABASCO", "TLAXCALA", "GUERRERO", "GUANAJUATO"],
+
+    "culturas": ["AMUZGA", "ANAHUAC", "BACAB", "BOTOCUDO", "BRIBRI", "MIXTECA", "MAZAHUA", "MAYA", "MATLATZINCA", "TOTONACA", "TZELTAL", "TZOTZIL", "TARAHUMARA", "TLAXCALTECA", "GUAYCURA", "GENIZARO", "GUARIJIO", "GUACHICHIL"],
+    
+    "monumentos": ["GLORIETA DE INSURGENTES", "GRUTAS DE CACAHUAMILPA", "GALERIA NACIONAL DE ARTE", "GUELATAO", "TEMPLO DE SAN FRANCISCO", "TORRE DE LA REFORMA", "TEATRO JUAREZ", "TEMPLO DE SAN AGUSTIN", "TABERNACULO DE OAXACA", "MUSEO DE LA REFORMA", "MONUMENTO A BENITO JUAREZ", "MERCADO DE SAN JUAN", "MURALES DE PALACIO NACIONAL", "MAUSOLEO DE LOS NINOS HEROES", "BIBLIOTECA PALAFOXIANA", "BASILICA DE GUADALUPE", "BALUARTE DE SAN CARLOS", "BARRIO DE TEPITO", "BOCA DEL RIO", "ARCO DE LA CALZADA", "ACUEDUCTO DE MORELIA", "ANTIGUO PALACIO MUNICIPAL", "ALHONDIGA DE GRANADITAS", "ATRIO DE SAN FRANCISCO"]
 };
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -16,9 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultDiv = document.getElementById('result');
     const timerDisplay = document.getElementById('timer');
 
+    const letrasPermitidas = ['A', 'B', 'M', 'G', 'T'];
+
     function getRandomLetter() {
-        const letters = "M";
-        return letters[Math.floor(Math.random() * letters.length)];
+        const indiceAleatorio = Math.floor(Math.random() * letrasPermitidas.length);
+        return letrasPermitidas[indiceAleatorio];
     }
 
     function startGame() {

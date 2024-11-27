@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Realidad Aumentada</title>
   <link rel="stylesheet" href="Recursos/styles.css">
-  <link rel="stylesheet" href="Recursos/w3.css">
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <link rel="manifest" href="./public/manifest.json">
   <link rel="stylesheet" href="./css/stylesIndex.css">
