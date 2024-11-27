@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="../preguntas.css">
 </head>
 <body>
+    <div style="position: relative; z-index: 10;">
+        <a class="button-55" href="../revolucionMexicana.html">Volver atrás</a>
+    </div>
     <font face="Century Gothic">
         <div id="pregunta">
             <h2>¿Cuál fue el plan proclamado el 28 de noviembre de 1911?</h2>
@@ -31,7 +34,7 @@
     <div id="mensaje"></div>
     <a-scene arjs>
         <a-marker preset="hiro">
-            <a-entity position="0 0 0" scale="1 1 1" rotation="270 90 270">
+            <a-entity position="0 0 0" scale=".3 .3 .3" rotation="270 90 270">
                 <a-entity position="0 0 0" scale="1" gltf-model="./models/planAyala.glb"></a-entity>
             </a-entity>
         </a-marker>
