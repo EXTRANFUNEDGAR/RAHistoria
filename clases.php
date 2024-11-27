@@ -176,14 +176,14 @@ if (mysqli_num_rows($result) > 0) {
 // Verificar si la consulta devuelve algún resultado
 if (mysqli_num_rows($result) < 1) {
     ?>
-        <form id="form" method="get" action="agregarClase.php">
+        <!-- <form id="form" method="get" action="agregarClase.php">
             <label for="res">Crear de clase</label>
             <br>
             <input type="text" id="res" name="res">
             <br>
             <br>
             <input class="button-55" role="button" id="enviar" type="submit" value="Entrar">
-        </form>
+        </form> -->
         <form id="form" method="get" action="ingresarClase.php">
             <label for="ingresar">Ingresar clase</label>
             <br>
